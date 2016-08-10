@@ -60,7 +60,6 @@ namespace boost
             using ::CreateSemaphoreExW;
 # endif
             using ::OpenEventW;
-            using ::GetModuleHandleW;
 # else
             using ::CreateMutexA;
             using ::CreateEventA;
@@ -88,6 +87,7 @@ namespace boost
             using ::GetCurrentProcess;
             using ::DuplicateHandle;
 #if !BOOST_PLAT_WINDOWS_RUNTIME
+            using ::GetModuleHandleW;
             using ::SleepEx;
             using ::Sleep;
             using ::QueueUserAPC;
